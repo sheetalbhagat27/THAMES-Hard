@@ -6,7 +6,7 @@ import { QuoteProvider } from '../context/QuoteContext';
 import MegaMenu from './MegaMenu';
 import SpecModal from './SpecModal';
 import SearchModal from './SearchModal';
-import Chatbot from './Chatbot';
+import FAQChatbot from './FAQChatbot';
 
 function HeaderNav() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -300,7 +300,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <MainFooter />
-      <Chatbot />
+      <FAQChatbot />
     </QuoteProvider>
   );
 }
