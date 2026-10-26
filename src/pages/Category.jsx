@@ -79,6 +79,18 @@ export default function Category() {
 
       <section className="section bg-ivory">
         <div className="container">
+          <div className="category-crosslink-block">
+            <h3>Explore Other Architectural Systems</h3>
+            <div className="luxury-pills">
+              {CATEGORIES.filter((x) => x.slug !== slug).map((x) => (
+                <Link key={x.slug} to={`/products/${x.slug}`} className="luxury-pill-btn">
+                  <span>{x.name}</span>
+                  <Icon n="arrow" s={14} />
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="category-sec-head">
             <div>
               <span className="luxury-eyebrow">Production Series</span>
@@ -98,18 +110,6 @@ export default function Category() {
                 full
               />
             ))}
-          </div>
-
-          <div className="category-crosslink-block">
-            <h3>Explore Other Architectural Systems</h3>
-            <div className="luxury-pills">
-              {CATEGORIES.filter((x) => x.slug !== slug).map((x) => (
-                <Link key={x.slug} to={`/products/${x.slug}`} className="luxury-pill-btn">
-                  <span>{x.name}</span>
-                  <Icon n="arrow" s={14} />
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </section>
